@@ -1,0 +1,19 @@
+{
+  "cmake.sourceDirectory":[
+    "${workspaceFolder}"
+  ],
+  "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--all-scopes-completion"
+  ],
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "gitstash.explorer.display.fileSorting": "path"
+}

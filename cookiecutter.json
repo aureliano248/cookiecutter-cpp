@@ -1,0 +1,4 @@
+{
+  "project_name": "my_project",
+  "target_name": "{{cookiecutter.project_name}}"
+}

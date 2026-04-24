@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_COLOR_DIAGNOSTICS": "ON"
+      }
+    },
+    {
+      "name": "Debug",
+      "displayName": "Debug configure",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/cmake-build-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "Release",
+      "displayName": "Release configure",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/cmake-build-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Debug",
+      "displayName": "Debug build all",
+      "configurePreset": "Debug"
+    },
+    {
+      "name": "Release",
+      "displayName": "Release build all",
+      "configurePreset": "Release"
+    },
+    {
+      "name": "{{ cookiecutter.target_name }}",
+      "displayName": "Debug build {{ cookiecutter.target_name }}",
+      "configurePreset": "Debug",
+      "targets": [
+        "{{ cookiecutter.target_name }}"
+      ]
+    }
+  ]
+}

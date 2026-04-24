@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "{{ cookiecutter.target_name }}",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/cmake-build-debug/{{ cookiecutter.target_name }}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "env": {},
+      "stopOnEntry": false
+    }
+  ]
+}
