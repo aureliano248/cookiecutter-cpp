@@ -2,6 +2,7 @@
   "cmake.sourceDirectory":[
     "${workspaceFolder}"
   ],
+  "cmake.parseBuildDiagnostics": false,  //关闭cmake的诊断功能，交给clangd处理
   "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
   "clangd.arguments": [
     "--background-index",
