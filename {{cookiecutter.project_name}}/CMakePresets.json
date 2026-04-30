@@ -41,11 +41,11 @@
       "configurePreset": "Release"
     },
     {
-      "name": "{{ cookiecutter.target_name }}",
-      "displayName": "Debug build {{ cookiecutter.target_name }}",
-      "configurePreset": "Debug",
+      "name": "your_preset_name",
+      "displayName": "your_preset_name",
+      "configurePreset": "Debug", //不会默认执行前置构建命令
       "targets": [
-        "{{ cookiecutter.target_name }}"
+        "your_target"
       ]
     }
   ]

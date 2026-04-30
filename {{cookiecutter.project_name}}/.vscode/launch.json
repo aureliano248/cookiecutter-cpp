@@ -2,13 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "{{ cookiecutter.target_name }}",
+      "name": "target_name",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/cmake-build-debug/{{ cookiecutter.target_name }}",
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      "env": {},
+      "program": "${workspaceFolder}/cmake-build-debug/target_name",
+      "args": [], //向main()传入执行参数
+      "cwd": "${workspaceFolder}", //执行路径
+      "env": {}, //环境变量
       "stopOnEntry": false
     }
   ]

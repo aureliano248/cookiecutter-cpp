@@ -1,6 +1,7 @@
 {
   "cmake.sourceDirectory":[
-    "${workspaceFolder}"
+    "${workspaceFolder}",
+    // "${workspaceFolder}/path",  //可以指定其他编译目录, 会使用该目录下的CMakePresets.json
   ],
   "cmake.parseBuildDiagnostics": false,  //关闭cmake的诊断功能，交给clangd处理
   "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
