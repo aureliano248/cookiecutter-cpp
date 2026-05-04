@@ -1,0 +1,25 @@
+{  
+  "version": "2.0.0",  
+  "tasks": [  
+    {  
+      "label": "Select the path of CMakePresets.json",  //<llm> opus4.6
+      "type": "process",  
+      "command": "node",  
+      "args": [  
+        "-e",  
+        "const fs=require('fs');const file='${workspaceFolder}/.vscode/settings.json';const rel='${relativeFileDirname}'.replace(/\\\\/g,'/');let txt=fs.readFileSync(file,'utf8');const literal='$'+'{workspaceFolder}';const newPath=(rel&&rel!=='.'&&rel!=='')?literal+'/'+rel:literal;txt=txt.replace(/(\"cmake\\.sourceDirectory\"\\s*:\\s*)\"[^\"]*\"/,(_,pre)=>pre+'\"'+newPath+'\"');fs.writeFileSync(file,txt);console.log('cmake.sourceDirectory set to:',newPath);"
+      ],  
+      "group": {  
+        "kind": "build",   // 归入"构建"任务组  
+        "isDefault": true  // 设为该组的默认任务  
+      },
+      "problemMatcher": [],  
+      "presentation": {  
+        "echo": true,  
+        "reveal": "always",  
+        "panel": "shared",  
+        "clear": true  
+      }  
+    }  
+  ]  
+}  

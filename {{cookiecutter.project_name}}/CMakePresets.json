@@ -2,12 +2,12 @@
   "version": 3,
   "configurePresets": [
     {
-      "name": "base",
+      "name": "base", //基础配置, 可以在其他配置中继承
       "hidden": true,
       "generator": "Ninja",
       "cacheVariables": {
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-        "CMAKE_COLOR_DIAGNOSTICS": "ON"
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON", //导出编译命令到compile_commands.json
+        "CMAKE_COLOR_DIAGNOSTICS": "ON" //开启颜色提示(但vscode的cmake插件仍不受影响)
       }
     },
     {
