@@ -7,7 +7,7 @@
     // "${workspaceFolder}/path",  //可以指定其他编译目录, 会使用该目录下的CMakePresets.json
   // ],
   "cmake.parseBuildDiagnostics": false,  //关闭cmake的诊断功能，交给clangd处理
-  "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+  "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json", //将生成的compile_commands.json文件复制到指定位置
   "clangd.arguments": [
     "--background-index",
     "--clang-tidy",
@@ -20,5 +20,7 @@
   "[c]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
-  "gitstash.explorer.display.fileSorting": "path"
+  "gitstash.explorer.display.fileSorting": "path",
+  "http.proxy": "http://127.0.0.1:7897",
+  "https.proxy": "http://127.0.0.1:7897",
 }

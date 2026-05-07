@@ -16,6 +16,7 @@ TEMPLATE="$TMP/{{cookiecutter.project_name}}"
 mkdir -p .vscode
 cp -n "$TEMPLATE/.vscode/settings.json" .vscode/ 2>/dev/null && echo "  added .vscode/settings.json" || echo "  skipped .vscode/settings.json (already exists)"
 cp -n "$TEMPLATE/.vscode/launch.json" .vscode/ 2>/dev/null && echo "  added .vscode/launch.json" || echo "  skipped .vscode/launch.json (already exists)"
+cp -n "$TEMPLATE/.vscode/tasks.json" .vscode/ 2>/dev/null && echo "  added .vscode/tasks.json" || echo "  skipped .vscode/tasks.json (already exists)"
 cp -n "$TEMPLATE/.vscode/README.md" .vscode/ 2>/dev/null && echo "  added .vscode/README.md" || echo "  skipped .vscode/README.md (already exists)"
 
 # 复制 CMakePresets.json
